@@ -1,68 +1,62 @@
 public class Urlaub
 {
-   private String ort;
-   private int preis;
-   private boolean allInclusive;
-   
-   
-   
-   
-   //Constructor: legt mir neue Objekte an
-   //heisst ganz gleich wie die Klasse
-   public Urlaub(String neuOrt, int neuPreis, boolean neuAllInclusive)
-   {
-     
-       setOrt(neuOrt);
-       setPreis(neuPreis);
-       setAllInclusive(neuAllInclusive);
-       
-   }
-   
-   public void setOrt(String neuOrt)
-   {
-       ort = neuOrt;
-   }
-   
-   public void setPreis(int neuPreis)
-   {
-       preis = neuPreis;
-   }
-   
-   public void setAllInclusive(boolean neuAllInclusive)
-   {
-       allInclusive = neuAllInclusive;
-   }
-   
-   public String getOrt()
-   {
-       return ort;
-   }
+    private String  ort;           // Der Urlaubsort
+    private int     preis;         // Kosten inkl. Steuer
+    private boolean allInclusive;  // Verpflegung inkl.
     
-   public int getPreis()
-   {
-       return preis;
-   }
-   
-   public boolean getAllInclusive()
-   {
-       return allInclusive;
-   }
-    
-    
-    /*
-     * New York - 2329 EUR - All inclusive: false
-     * Berlin - 999 EUR - All inclusive: true
-     */
-    
-    
-    //printUrlaub() //Printmethode keine Parameter, weil ein Befehl (schreib deine Eigenschaft auf)
-    
-    public void printUrlaub()
+    public Urlaub(String neuOrt, int neuPreis, boolean neuAllInclusive)
     {
-        System.out.println(ort + " - " + preis + " EUR – AllInclusive: " + allInclusive);
+        setOrt(neuOrt);
+        setPreis(neuPreis);
+        setAllInclusive(neuAllInclusive);
     }
     
+    public String getOrt()
+    {
+        return ort;
+    }
     
+    public int getPreis()
+    {
+        return preis;
+    }
     
+    public boolean getAllInclusive()
+    {
+        return allInclusive;
+    }
     
+    public void setOrt(String neuOrt)
+    {
+        // Die Eigenschaft ort wird auf den Wert des Parameters gesetzt.
+        ort = neuOrt;
+    }
+    
+    public void setPreis(int neuPreis)
+    {
+        preis = neuPreis;
+    }
+    
+    /*
+     * Die Eigenschaft allInclusive wird
+     * auf den Wert den übergbenen Parameters
+     * gesetzt
+     */
+    public void setAllInclusive(boolean neuAllInclusive)
+    {
+        allInclusive = neuAllInclusive;
+    }
+    
+    /*
+     * New York - 2310 EUR - AllInclusive: false
+     * Berlin - 999 EUR - AllInclusive: true
+     */
+    public void printUrlaub()
+    {
+        System.out.println(ort + " - " + preis + " EUR - AllInclusive: " + allInclusive);
+    }
 }
+
+
+
+

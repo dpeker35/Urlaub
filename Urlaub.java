@@ -11,6 +11,32 @@ public class Urlaub
         setAllInclusive(neuAllInclusive);
     }
     
+    //ich hab kein parameter neuPreis, aber im UML kann man defaulwerte angeben
+    public Urlaub(String neuOrt, boolean neuAllInclusive) 
+    {
+        setOrt(neuOrt);
+        setPreis(1999);
+        setAllInclusive(neuAllInclusive);
+    }
+    
+    public Urlaub(String neuOrt)
+    {
+        setOrt(neuOrt);
+        setPreis(1999);
+        setAllInclusive(false);
+        
+    }
+    
+    
+    public Urlaub()
+    {
+        setOrt("Wien");
+        setPreis(1999);
+        setAllInclusive(false);
+    }
+    
+    
+    
     public String getOrt()
     {
         return ort;

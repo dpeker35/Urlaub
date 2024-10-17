@@ -52,6 +52,28 @@ public class Urlaub
         return allInclusive;
     }
     
+    public String getZielort()
+    {
+        int pos;
+        String zielOrt;
+        
+        pos = ort.indexOf("-");    //5
+        zielOrt = ort.substring(0, pos);
+        return zielOrt;
+        
+    }
+    
+    public String getLand()
+    {
+        int pos;
+        String land;
+        
+        pos = ort.indexOf("-")+1;
+        land = ort.substring(pos);
+        return land;
+        
+    }
+    
     public void setOrt(String ort)
     {
         // Die Eigenschaft ort wird auf den Wert des Parameters gesetzt.

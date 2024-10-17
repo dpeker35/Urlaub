@@ -1,27 +1,27 @@
 public class Urlaub
 {
-    private String  ort;           // Der Urlaubsort
-    private int     preis;         // Kosten inkl. Steuer
-    private boolean allInclusive;  // Verpflegung inkl.
+    private String  ort;           
+    private int     preis;        
+    private boolean allInclusive;  
     
-    public Urlaub(String neuOrt, int neuPreis, boolean neuAllInclusive)
+    public Urlaub(String ort, int preis, boolean allInclusive)
     {
-        setOrt(neuOrt);
-        setPreis(neuPreis);
-        setAllInclusive(neuAllInclusive);
+        setOrt(ort);
+        setPreis(preis);
+        setAllInclusive(allInclusive);
     }
     
-    //ich hab kein parameter neuPreis, aber im UML kann man defaulwerte angeben
-    public Urlaub(String neuOrt, boolean neuAllInclusive) 
+    
+    public Urlaub(String ort, boolean allInclusive) 
     {
-        setOrt(neuOrt);
+        setOrt(ort);
         setPreis(1999);
-        setAllInclusive(neuAllInclusive);
+        setAllInclusive(allInclusive);
     }
     
-    public Urlaub(String neuOrt)
+    public Urlaub(String ort)
     {
-        setOrt(neuOrt);
+        setOrt(ort);
         setPreis(1999);
         setAllInclusive(false);
         
@@ -52,25 +52,23 @@ public class Urlaub
         return allInclusive;
     }
     
-    public void setOrt(String neuOrt)
+    public void setOrt(String ort)
     {
         // Die Eigenschaft ort wird auf den Wert des Parameters gesetzt.
-        ort = neuOrt;
+        this.ort = ort;
     }
     
-    public void setPreis(int neuPreis)
+    public void setPreis(int preis)
     {
-        preis = neuPreis;
+        this.preis = preis;
     }
     
     /*
-     * Die Eigenschaft allInclusive wird
-     * auf den Wert den übergbenen Parameters
-     * gesetzt
+     * this bezieht sich immer auf die Eigenschaften
      */
-    public void setAllInclusive(boolean neuAllInclusive)
+    public void setAllInclusive(boolean nallInclusive)
     {
-        allInclusive = neuAllInclusive;
+        this.allInclusive = allInclusive;
     }
     
     /*

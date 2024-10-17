@@ -72,13 +72,21 @@ public class Urlaub
     }
     
     /*
-     * New York - 2310 EUR - AllInclusive: false
-     * Berlin - 999 EUR - AllInclusive: true
+     * New York - 2310 EUR - all Inclusive
+     * Berlin - 999 EUR - keine Verpflegung
      */
     public void printUrlaub()
     {
-        System.out.println(ort + " - " + preis + " EUR - AllInclusive: " + allInclusive);
+        if(allInclusive == true)
+        {
+        System.out.println(ort + " - " + preis + " EUR - all Inclusive");
+        }
+        else
+        {
+            System.out.println(ort + " - " + preis + " EUR - keine Verpflegung");
+        }
     }
+
 }
 
 

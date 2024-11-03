@@ -56,10 +56,12 @@ public class Urlaub
     {
         int pos;
         String zielOrt;
+        pos = ort.indexOf("-");  //5
+        zielOrt = ort.substring(0,pos);
         
-        pos = ort.indexOf("-");    //5
-        zielOrt = ort.substring(0, pos);
         return zielOrt;
+        
+        
         
     }
     
@@ -70,9 +72,13 @@ public class Urlaub
         
         pos = ort.indexOf("-")+1;
         land = ort.substring(pos);
+        
         return land;
         
     }
+    
+   
+   
     
     public void setOrt(String ort)
     {
@@ -80,15 +86,24 @@ public class Urlaub
         this.ort = ort;
     }
     
+    //500...3000
     public void setPreis(int preis)
     {
+        if((preis >= 500) && (preis <= 3000))
+        {
         this.preis = preis;
+        }
+        else
+        {
+            System.out.println("Fehler: ungültiger Preis. muss zw. 5000 und 3000 sein!");
+            this.preis = 1999;
+        }
     }
     
     /*
      * this bezieht sich immer auf die Eigenschaften
      */
-    public void setAllInclusive(boolean nallInclusive)
+    public void setAllInclusive(boolean allInclusive)
     {
         this.allInclusive = allInclusive;
     }

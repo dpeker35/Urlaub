@@ -96,7 +96,7 @@ public class Urlaub
         else
         {
             System.out.println("Fehler: ungültiger Preis. muss zw. 5000 und 3000 sein!");
-            this.preis = 1999;
+            this.preis = 1999; 
         }
     }
     

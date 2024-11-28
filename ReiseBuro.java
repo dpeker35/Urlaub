@@ -4,29 +4,41 @@ public class ReiseBuro
     private Urlaub urlaub1;
     private Urlaub urlaub2;
     
+    public void loschen(Urlaub welcher)
+    {
+        //todo
+    }
+    
     public void hinzufugen(Urlaub welcher)
     {
-        if (urlaub0 == null)
+        if (welcher != null)
         {
-            urlaub0 = welcher;
-        }
-        else
-        {
-            if (urlaub1 == null)
+            if (urlaub0 == null)
             {
-                urlaub1 = welcher;
+                urlaub0 = welcher;
             }
             else
             {
-                if (urlaub2 == null)
+                if (urlaub1 == null)
                 {
-                    urlaub2 = welcher;
+                    urlaub1 = welcher;
                 }
                 else
                 {
-                    System.out.println("Fehler: keine weiteren Angebote mehr möglich!");
+                    if (urlaub2 == null)
+                    {
+                        urlaub2 = welcher;
+                    }
+                    else
+                    {
+                        System.out.println("Fehler: keine weiteren Angebote mehr möglich!");
+                    }
                 }
             }
+        }
+        else
+        {
+            System.out.println("Fehler: kein Urlaub");
         }
     }
 
@@ -96,21 +108,3 @@ public class ReiseBuro
         // return min;
     // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

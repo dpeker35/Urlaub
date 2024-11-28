@@ -108,6 +108,27 @@ public class Urlaub
         this.allInclusive = allInclusive;
     }
     
+       public void loschen(ReiseBuro wo)
+    {
+        //todo
+    }
+    
+    
+    public void hinzufugen(ReiseBuro wo)
+    {
+        if(wo != null)
+        {
+            wo.hinzufugen(this);
+        }
+        else
+        {
+            System.out.println("Fehler: kein Reisebüro!");
+        }
+        
+    }
+    
+    
+    
     /*
      * New York - 2310 EUR - all Inclusive
      * Berlin - 999 EUR - keine Verpflegung

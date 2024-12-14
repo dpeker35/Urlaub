@@ -3,6 +3,7 @@ public class Urlaub
     private String  ort;           
     private int     preis;        
     private boolean allInclusive;  
+    private ReiseBuro reiseBuro; //für die Backreferenz
     
     public Urlaub(String ort, int preis, boolean allInclusive)
     {
@@ -77,7 +78,10 @@ public class Urlaub
         
     }
     
-   
+   public ReiseBuro getReiseBuro()
+   {
+       return reiseBuro;
+   }
    
     
     public void setOrt(String ort)
@@ -108,9 +112,22 @@ public class Urlaub
         this.allInclusive = allInclusive;
     }
     
-       public void loschen(ReiseBuro wo)
+    public void setReiseBuro(ReiseBuro reiseBuro)
     {
-        //todo
+        this.reiseBuro = reiseBuro;
+    }
+    
+       public void loschen()
+    {
+        if(reiseBuro !=null)
+        {
+            reiseBuro.loschen(this);
+        }
+        else
+        {
+            System.out.println("Fehler: nicht im Reisebüro angeboten!");
+        }
+        
     }
     
     
